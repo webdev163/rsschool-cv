@@ -57,3 +57,15 @@ const newmodule = (done) => {
 
 exports.newmodule = newmodule;
 ```
+
+## Work experience
+
+No commercial developer experience or work participation until now. One of my aims in taking RSSchool courses is to change the fact above
+
+## Education
+
+I have a law degree (2010) and a good experience in that field. In 2020 I started self-education in frontend field. Particularly all my listed skills were gained while self-educating. In 2021 I realized the need of learning backend basics, that's why I have passed wordpress course in GLO Academy (2 months).
+
+## English level
+My current English level is B2-C1. Certificates:
+- Certificate of completion of 2 weeks-course in ILSC New York (2016)
