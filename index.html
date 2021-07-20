@@ -12,33 +12,34 @@
 
     <header>
       <div class="header">
-        <h1 class="header__title">Dmitry Kolesnichenko</h1>
-        <span class="header__subtitle">Beginer Front End Developer</span>
-        <img class="header__avatar" src="img/avatar.jpg" alt="Аватар">
+        <div class="header-wrapper">
+          <img class="header__avatar" src="img/avatar.jpg" alt="Аватар">
+          <div class="header__text">
+            <h1 class="header__title">Dmitry Kolesnichenko</h1>
+            <span class="header__subtitle">Beginner front-end developer</span>
+            <section class="contacts">
+              <ul class="contacts__list">
+                <li class="contacts__item"><svg class="icon-place" width="20" height="20"><use href="img/sprite.svg#tool"></svg>Samara</li>
+                <li class="contacts__item"><svg class="icon-phone" width="20" height="20"><use href="img/sprite.svg#phone"></svg><a href="tel:+79967277522">+7 (996) 727-75-22</a></li>
+                <li class="contacts__item"><svg class="icon-email" width="20" height="20"><use href="img/sprite.svg#email"></svg><a href="mailto:dmitriykol@gmail.com">dmitriykol@gmail.com</a></li>
+                <li class="contacts__item"><svg class="icon-telegram" width="20" height="20"><use href="img/sprite.svg#telegram"></svg><a href="https://t.me/dmitry799">dmitry799</a></li>
+                <li class="contacts__item"><svg class="icon-github" width="20" height="20"><use href="img/sprite.svg#github-logo"></svg><a href="https://github.com/webdev163">webdev163</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        
       </div>
     </header>
     
     <main class="main">
-      <section class="contacts">
-        <div class="contacts">
-          <h2 class="contacts__title">Contacts</h2>
-          <ul class="contacts__list">
-            <li class="contacts__item">City: Samara</li>
-            <li class="contacts__item">Phone: <a href="tel:+79967277522">+7 (996) 727-75-22</a></li>
-            <li class="contacts__item">E-mail: <a href="mailto:dmitriykol@gmail.com">dmitriykol@gmail.com</a></li>
-            <li class="contacts__item">Telegram: <a href="https://t.me/dmitry799">dmitry799</a></li>
-            <li class="contacts__item">Github: <a href="https://github.com/webdev163">webdev163</a></li>
-          </ul>
-        </div>
-      </section>
-
       <section class="summary">
         <h2 class="summary__title">Summary:</h2>
-        <p class="summary__text">Beginner Frontend developer, 33 years old, 1 year of selfeducating experience, no commercial experience. My aim is to get comprehensive knowledge in frontend and to find people with the same ambitions. I'am also interested in career growth in this particular area. My main strengths are:</p>
+        <p class="summary__text">Beginner front-end developer, 33 years old, 1 year of selfeducating experience, no commercial experience. My aim is to get comprehensive knowledge in frontend and to find people with the same ambitions. I'am also interested in career growth in this particular area. My main strengths are:</p>
         <ul class="summary__list">
           <li class="summary-item">fast learning</li>
           <li class="summary-item">curiosity</li>
-          <li class="summary-item">self control</a></li>
+          <li class="summary-item">self control</li>
           <li class="summary-item">good English</li>
           <li class="summary-item">enjoyment of work</li>
         </ul>
@@ -49,7 +50,7 @@
         <ul class="skills__list">
           <li class="skills-item">HTML, CSS</li>
           <li class="skills-item">EJS, SASS, LESS</li>
-          <li class="skills-item">BEM, CSS Modules, Bootstrap</a></li>
+          <li class="skills-item">BEM, CSS Modules, Bootstrap</li>
           <li class="skills-item">Postcss</li>
           <li class="skills-item">JavaScript (including ES6)</li>
           <li class="skills-item">NPM, Webpack, babel, gulp</li>
@@ -97,7 +98,7 @@
 
       <section class="experience">
         <h2 class="experience__title">Work experience:</h2>
-        <p class="experience__text">No commercial developer experience or work participation until now. One of my aims in taking RSSchool courses is to change the fact above</p>
+        <p class="experience__text">No commercial developer experience or work participation until now. One of my aims in taking RS School courses is to change the fact above</p>
       </section>
 
       <section class="education">
@@ -116,8 +117,8 @@
 
     <footer class="footer">
       <div class="copyright">&copy; <time datetime="2021">2021</time></div>
-      <a href="https://github.com/webdev163" class="footer__github"><img src="img/github-logo.svg" width="24" height="24" alt="Логотип github"></a>
-      <a href="https://rs.school/js/" class="footer__rsschool"><img src="img/rs_school_js.svg" width="75" height="25" alt="Логотип RS School"></a>
+      <a class="footer__github" href="https://github.com/webdev163"><svg class="icon-github" width="24" height="24" alt="Логотип github"><use href="img/sprite.svg#github-logo"></svg></a>
+      <a class="footer__rsschool" href="https://rs.school/js/"><img src="img/rs_school_js.svg" width="75" height="25" alt="Логотип RS School"></a>
     </footer>
   </div>
 </body>

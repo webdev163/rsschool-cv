@@ -19,6 +19,8 @@
 body {
   font-family: Roboto, sans-serif;
   background-color: #f5f5f5;
+  color: #202020;
+  padding: 40px 25px 40px;
 }
 
 img {
@@ -26,6 +28,158 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 20px 25px rgba(153, 153, 153, 0.1);
+}
+
+.header {
+  border-bottom: 1px dashed #969696;
+  padding-bottom: 25px;
+}
+
+.header__avatar {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1)
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__text {
+  margin-left: 25px;
+}
+
+.header__title {
+  font-size: 35px;
+}
+
+.header__subtitle {
+  font-size: 25px;
+}
+
+.header__avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.contacts {
+  margin-top: 35px;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: #313131;
+}
+
+.contacts__item:hover a {
+  color: #808080;
+  text-decoration: underline;
+}
+
+.contacts__item:hover:not(:first-child) svg {
+  fill: #808080;
+  cursor: pointer;
+}
+
+.contacts__list {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contacts__item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.contacts__item svg {
+  margin-right: 5px;
+}
+
+.summary__list, .skills__list, pre {
+  padding: 20px;
+  padding-left: 50px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  border: 1px solid #ececec
+}
+
+.main, .footer {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+}
+
+.main section {
+  margin-bottom: 40px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ececec;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4
+}
+
+.copyright, .footer__github {
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 5px;
+  }
+  .header__title {
+    font-size: 25px;
+  }
+  .code-sample {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header__text {
+    margin-left: 0;
+    text-align: center;
+  }
+  .contacts {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contacts__item {
+    margin-bottom: 15px;
+  }
+  .header__subtitle {
+    font-size: 20px;
+  }
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container {
+    padding: 15px;
+  }
+  .copyright, .footer__github {
+    margin-right: 25px;
+  }
 }
