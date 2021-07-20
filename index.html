@@ -4,10 +4,121 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <title>CV</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+  <div class="container">
+
+    <header>
+      <div class="header">
+        <h1 class="header__title">Dmitry Kolesnichenko</h1>
+        <span class="header__subtitle">Beginer Front End Developer</span>
+        <img class="header__avatar" src="img/avatar.jpg" alt="Аватар">
+      </div>
+    </header>
+    
+    <main class="main">
+      <section class="contacts">
+        <div class="contacts">
+          <h2 class="contacts__title">Contacts</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">City: Samara</li>
+            <li class="contacts__item">Phone: <a href="tel:+79967277522">+7 (996) 727-75-22</a></li>
+            <li class="contacts__item">E-mail: <a href="mailto:dmitriykol@gmail.com">dmitriykol@gmail.com</a></li>
+            <li class="contacts__item">Telegram: <a href="https://t.me/dmitry799">dmitry799</a></li>
+            <li class="contacts__item">Github: <a href="https://github.com/webdev163">webdev163</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="summary">
+        <h2 class="summary__title">Summary:</h2>
+        <p class="summary__text">Beginner Frontend developer, 33 years old, 1 year of selfeducating experience, no commercial experience. My aim is to get comprehensive knowledge in frontend and to find people with the same ambitions. I'am also interested in career growth in this particular area. My main strengths are:</p>
+        <ul class="summary__list">
+          <li class="summary-item">fast learning</li>
+          <li class="summary-item">curiosity</li>
+          <li class="summary-item">self control</a></li>
+          <li class="summary-item">good English</li>
+          <li class="summary-item">enjoyment of work</li>
+        </ul>
+      </section>
+
+      <section class="skills">
+        <h2 class="skills__title">Skills:</h2>
+        <ul class="skills__list">
+          <li class="skills-item">HTML, CSS</li>
+          <li class="skills-item">EJS, SASS, LESS</li>
+          <li class="skills-item">BEM, CSS Modules, Bootstrap</a></li>
+          <li class="skills-item">Postcss</li>
+          <li class="skills-item">JavaScript (including ES6)</li>
+          <li class="skills-item">NPM, Webpack, babel, gulp</li>
+          <li class="skills-item">Eslint, stylelint</li>
+          <li class="skills-item">PHP/Wordpress</li>
+          <li class="skills-item">Git, GitHub</li>
+        </ul>
+      </section>
+
+      <section class="code-sample">
+        <h2 class="code-sample__title">Code sample:</h2>
+        <p class="code-sample__text">Gulp task to run webpack:</p>
+        <pre>
+          <code>
+            const webpack = (done) => {
+              webpackModule(webpackConfig, (err, stats) => {
+                if (err) {
+                    console.error(err.stack || err);
+                    if (err.details) {
+                        console.error(err.details);
+                    }
+                    done()
+                    return;
+                }
+                const info = stats.toJson();
+                if (stats.hasErrors()) {
+                    console.error(info.errors);
+                }
+                if (stats.hasWarnings()) {
+                    console.warn(info.warnings);
+                }
+                console.log(stats.toString({
+                    colors: true,
+                    errors: true,
+                    warnings: true
+                }))
+                done()
+              });
+            };
+
+            exports.webpack = webpack;
+          </code>
+        </pre>
+      </section>
+
+      <section class="experience">
+        <h2 class="experience__title">Work experience:</h2>
+        <p class="experience__text">No commercial developer experience or work participation until now. One of my aims in taking RSSchool courses is to change the fact above</p>
+      </section>
+
+      <section class="education">
+        <h2 class="education__title">Education:</h2>
+        <p class="education__text">I have a law degree (2010) and a good experience in that field. In 2020 I started self-education in frontend field. Particularly all my listed skills were gained while self-educating. In 2021 I realized the need of learning backend basics, that's why I have passed wordpress course in GLO Academy (2 months).</p>
+      </section>
+
+      <section class="english-level">
+        <h2 class="english-level__title">English level:</h2>
+        <p class="english-level__text">My current English level is B2-C1. Certificates:</p>
+        <ul class="english-level__cert-list">
+          <li class="english-level__cert-item"><p>Certificate of completion of 2 weeks-course in ILSC New York (2016)</p></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="copyright">&copy; <time datetime="2021">2021</time></div>
+      <a href="https://github.com/webdev163" class="footer__github"><img src="img/github-logo.svg" width="24" height="24" alt="Логотип github"></a>
+      <a href="https://rs.school/js/" class="footer__rsschool"><img src="img/rs_school_js.svg" width="75" height="25" alt="Логотип RS School"></a>
+    </footer>
+  </div>
 </body>
 </html>
