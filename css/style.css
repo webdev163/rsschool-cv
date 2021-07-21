@@ -21,6 +21,7 @@ body {
   background-color: #f5f5f5;
   color: #202020;
   padding: 40px 25px 40px;
+  font-size: 18px;
 }
 
 img {
@@ -28,7 +29,7 @@ img {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 30px;
   background-color: #fff;
@@ -37,9 +38,43 @@ img {
   line-height: 1.5;
 }
 
-section h2 {
+.main :not(aside) section, .summary {
+  text-align: justify;
+}
+
+.main :not(aside) section h2 {
   background: repeating-linear-gradient( -55deg, #fff, #fff 10px, #f5f5f5 10px, #f5f5f5 20px);
   padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.aside h2 {
+  border-bottom: 1px dashed #000;
+}
+
+.skills {
+  margin-bottom: 0;
+}
+
+.skills, .summary {
+  margin-top: 30px;
+  max-width: 100%;
+  padding-right: 15px;
+}
+
+.skills__list {
+  padding: 0;
+  word-spacing: 10px;
+  margin-bottom: 10px;
+}
+
+.skills__item {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 15px;
 }
 
 .header {
@@ -57,7 +92,7 @@ section h2 {
 }
 
 .header__text {
-  margin-left: 25px;
+  margin-left: 65px;
 }
 
 .header__title {
@@ -70,9 +105,10 @@ section h2 {
 }
 
 .header__avatar {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
+  margin-left: 70px;
 }
 
 .contacts__title {
@@ -116,19 +152,21 @@ section h2 {
   margin-right: 10px;
 }
 
-.summary__list, .skills__list, pre {
+pre {
   padding: 20px;
   padding-left: 50px;
   background-color: #f8f8f8;
   border-radius: 10px;
-  border: 1px solid #ececec
+  border: 1px solid #ececec;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .summary__list, .skills__list, .english-level__cert-list {
   list-style: none;
 }
 
-.summary__item::before, .skills__item::before, .english-level__cert-item::before {
+.summary__item::before, .english-level__cert-item::before {
   display: inline-block;
   content: ' ';
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='229.153' height='229.153'%3E%3Cpath d='M92.356 223.549c7.41 7.5 23.914 5.014 25.691-6.779 11.056-73.217 66.378-134.985 108.243-193.189C237.898 7.452 211.207-7.87 199.75 8.067 161.493 61.249 113.274 117.21 94.41 181.744c-21.557-22.031-43.201-43.853-67.379-63.212-15.312-12.265-37.215 9.343-21.738 21.737 31.501 25.232 58.724 54.655 87.063 83.28z'/%3E%3C/svg%3E");
@@ -138,10 +176,6 @@ section h2 {
   margin-right: 10px;
 }
 
-.main, .footer {
-  text-align: justify;
-}
-
 .main {
   display: flex;
   align-items: flex-start;
@@ -149,17 +183,24 @@ section h2 {
 }
 
 .aside {
-  flex-basis: 223px;
+  flex-basis: 370px;
   flex-shrink: 0;
   padding-top: 5px;
+  padding-left: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 15px;
+  background-color: #f8f8f8;
+  border: 1px solid #ececec;
+  height: 100%;
 }
 
-.main section {
-  margin-bottom: 40px;
+.main :not(aside) section {
+  margin-bottom: 37px;
 }
 
-.aside section {
-  margin-bottom: 0;
+.main :not(aside) section:last-child {
+  margin-bottom: 20px;
 }
 
 .footer {
@@ -169,7 +210,7 @@ section h2 {
   background-color: #ececec;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #d4d4d4
+  border: 1px solid #d4d4d4;
 }
 
 .copyright, .footer__github {
@@ -178,6 +219,17 @@ section h2 {
 
 pre {
   padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+  }
+  .aside {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -191,12 +243,19 @@ pre {
     font-size: 20px;
     line-height: 1.2;
   }
-  .code-sample {
-    display: none;
+  .header__text {
+    margin-left: 35px;
   }
+  .header__avatar {
+    margin-left: 45px;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
+  body {
+    font-size: 16px;
+  }
   .header-wrapper {
     flex-wrap: wrap;
     justify-content: center;
@@ -205,23 +264,24 @@ pre {
     text-align: center;
     flex-basis: 100%;
     margin-left: 0;
+    margin-right: 0;
   }
   .header__subtitle {
     font-size: 20px;
   }
-  .main {
-    padding-left: 0;
-    padding-right: 0;
-    flex-wrap: wrap;
+  .header__avatar {
+    margin-left: 0;
   }
   .container {
     padding: 15px;
-    line-height: 1.2;
   }
   .copyright, .footer__github {
     margin-right: 25px;
   }
   .contacts__item {
     margin-bottom: 20px;
+  }
+  .code-sample {
+    display: none;
   }
 }
