@@ -10,7 +10,7 @@
 
 ## Summary
 
-Beginner Frontend developer, 33 years old, 1 year of selfeducating experience, no commercial experience. My aim is to get comprehensive knowledge in frontend and to find people with the same ambitions. I'am also interested in career growth in this particular area. My main strengths are:
+Junior Frontend developer, 33 years old, 1 year of selfeducating experience, no commercial experience. My aim is to get comprehensive knowledge in frontend and to find people with the same ambitions. I'am also interested in career growth in this particular area. My main strengths are:
 - fast learning
 - curiosity
 - self control
@@ -31,31 +31,26 @@ Beginner Frontend developer, 33 years old, 1 year of selfeducating experience, n
 
 ## Code sample
 
-Gulp task for creating new module files for postcss-modules package:
+Function to convert RGB to hex:
 
 ```javascript
-const newmodule = (done) => {
-    fs.mkdir((paths.src.modules + `${process.argv[4]}/`), function (err) {
-        if (err) throw err;
-        console.log('Directory created');
-    })
-    fs.writeFile((paths.src.modules + `${process.argv[4]}/${process.argv[4]}.ejs`), '', function (err) {
-        if (err) throw err;
-        console.log('EJS file created');
-    })
-    fs.writeFile((paths.src.modules + `${process.argv[4]}/${process.argv[4]}.scss`), '', function (err) {
-        if (err) throw err;
-        console.log('SCSS file created');
-    })
-    fs.appendFile(paths.src.scss + 'style.scss', (`@import '../modules/_css/${process.argv[4]}';\n`), function (err) {
-        if (err) throw err;
-        console.log('style.scss updated');
-    });
-    console.log(`---------------------------------------------------------------------------\ncopy to index.html -->\t<%- include('../modules/_html/${process.argv[4]}.ejs'); %>\n---------------------------------------------------------------------------`)
-    done()
-};
-
-exports.newmodule = newmodule;
+function rgb(r, g, b) {
+  const args = Array.prototype.slice.call(arguments);
+  result = [];
+  args.forEach(el => {
+    if (el <= 0) {
+      result.push('00');
+    } else if (el < 16) {
+      result.push('0' + el.toString(16));
+    } else if (el > 255) {
+      el = 255;
+      result.push(el.toString(16));
+    } else {
+      result.push(el.toString(16));
+    }
+  })
+  return result.join('').toUpperCase();
+}
 ```
 
 ## Work experience
@@ -64,7 +59,7 @@ No commercial developer experience or work participation until now. One of my ai
 
 ## Education
 
-I have a law degree (2010) and a good experience in that field. In 2020 I started self-education in frontend field. Particularly all my listed skills were gained while self-educating. In 2021 I realized the need of learning backend basics, that's why I have passed wordpress course in GLO Academy (2 months).
+I have a law degree (2010) and a good experience in that field. In 2020 I started self-education in frontend field. Particularly all my listed skills were gained while self-educating. In 2021 I realized the need of learning backend basics, that's why I have passed wordpress course (2 months).
 
 ## English level
 My current English level is B2-C1. Certificates:
