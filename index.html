@@ -56,7 +56,7 @@
         <div class="main-wrapper">
           <section class="summary">
             <h2 class="summary__title">Summary:</h2>
-            <p class="summary__text">Beginner front-end developer, 33 years old, 1 year of selfeducating experience, no commercial
+            <p class="summary__text">Junior front-end developer, 33 years old, 1 year of selfeducating experience, no commercial
               experience. My aim is to get comprehensive knowledge in frontend and to find people with the same ambitions. I'am
               also interested in career growth in this particular area. My main strengths are:</p>
             <ul class="summary__list">
@@ -85,52 +85,38 @@
           
           <section class="code-sample">
             <h2 class="code-sample__title">Code sample:</h2>
-            <p class="code-sample__text">Gulp task to run webpack:</p>
+            <p class="code-sample__text">Function to convert RGB to hex:</p>
             <pre>
               <code>
-                const webpack = (done) => {
-                  webpackModule(webpackConfig, (err, stats) => {
-                    if (err) {
-                        console.error(err.stack || err);
-                        if (err.details) {
-                            console.error(err.details);
-                        }
-                        done()
-                        return;
+                function rgb(r, g, b) {
+                  const args = Array.prototype.slice.call(arguments);
+                  result = [];
+                  args.forEach(el => {
+                    if (el &lt;= 0) {
+                      result.push('00');
+                    } else if (el &lt; 16) {
+                      result.push('0' + el.toString(16));
+                    } else if (el > 255) {
+                      el = 255;
+                      result.push(el.toString(16));
+                    } else {
+                      result.push(el.toString(16));
                     }
-                    const info = stats.toJson();
-                    if (stats.hasErrors()) {
-                        console.error(info.errors);
-                    }
-                    if (stats.hasWarnings()) {
-                        console.warn(info.warnings);
-                    }
-                    console.log(stats.toString({
-                        colors: true,
-                        errors: true,
-                        warnings: true
-                    }))
-                    done()
-                  });
-                };
-
-                exports.webpack = webpack;
+                  })
+                  return result.join('').toUpperCase();
+                }
               </code>
             </pre>
           </section>
           
           <section class="experience">
             <h2 class="experience__title">Work experience:</h2>
-            <p class="experience__text">No commercial developer experience or work participation until now. One of my aims in
-              taking RS School courses is to change the fact above.</p>
+            <p class="experience__text">No commercial developer experience or work participation until now. One of my aims in taking RS School courses is to change the fact above.</p>
           </section>
           
           <section class="education">
             <h2 class="education__title">Education:</h2>
-            <p class="education__text">I have a law degree (2010) and a good experience in that field. In 2020 I started
-              self-education in frontend field. Particularly all my listed skills were gained while self-educating. In 2021 I
-              realized the need of learning backend basics, that's why I have passed wordpress course in GLO Academy (2 months).
-            </p>
+            <p class="education__text">I have a law degree (2010) and a good experience in that field. In 2020 I started self-education in frontend field. Particularly all my listed skills were gained while self-educating. In 2021 I realized the need of learning backend basics, that's why I have passed wordpress course (2 months).</p>
           </section>
           
           <section class="english-level">
