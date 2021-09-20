@@ -6,151 +6,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/highlight.min.css">
   </head>
   <body>
     <div class="container">
 
-      <header>
-        <div class="header">
-          <div class="header-wrapper">
-            <img class="header__avatar" src="img/avatar.jpg" alt="Avatar">
-            <div class="header__text">
-              <h1 class="header__title">Dmitry Kolesnichenko</h1>
-              <span class="header__subtitle">Beginner front-end developer</span>
-              
-            </div>
-          </div>
-          
+      <header class="header hidden fade-in-1">
+        <nav class="header-wrapper">
+          <ul class="main-menu">
+            <li class="main-menu-item"><a href="#skills" class="main-menu-link">Skills</a></li>
+            <li class="main-menu-item"><a href="#projects" class="main-menu-link">Projects</a></li>
+            <li class="main-menu-item"><a href="#experience" class="main-menu-link">Experience</a></li>
+            <li class="main-menu-item"><a href="#education" class="main-menu-link">Education</a></li>
+            <li class="main-menu-item"><a href="#code-sample" class="main-menu-link">Code sample</a></li>
+            <li class="main-menu-item"><a href="#languages" class="main-menu-link">Languages</a></li>
+            <li class="main-menu-item inactive"><span class="inactive">Video</span></li>
+          </ul>
+        </nav>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </header>
       
       <main class="main">
-        <aside class="aside">
-          <section class="contacts">
-            <h2 class="contacts__title">Contacts:</h2>
-            <ul class="contacts__list">
-              <li class="contacts__item"><svg class="icon-place" width="20" height="20">
-                  <title>City</title>
-                  <use href="img/sprite.svg#tool"></use>
-                </svg>Samara</li>
-              <li class="contacts__item"><svg class="icon-phone" width="20" height="20">
-                  <title>Phone</title>
-                  <use href="img/sprite.svg#phone"></use>
-                </svg><a href="tel:+79967277522">+7 (996) 727-75-22</a></li>
-              <li class="contacts__item"><svg class="icon-email" width="20" height="20">
-                  <title>Email</title>
-                  <use href="img/sprite.svg#email"></use>
-                </svg><a href="mailto:dmitriykol@gmail.com">dmitriykol@gmail.com</a></li>
-              <li class="contacts__item"><svg class="icon-telegram" width="20" height="20">
-                  <title>Telegram</title>
-                  <use href="img/sprite.svg#telegram"></use>
-                </svg><a href="https://t.me/dmitry799">dmitry799</a></li>
-              <li class="contacts__item"><svg class="icon-github" width="20" height="20">
-                  <title>Github</title>
-                  <use href="img/sprite.svg#github-logo"></use>
-                </svg><a href="https://github.com/webdev163">webdev163</a></li>
-            </ul>
-          </section>
-
-          <section class="summary">
-            <h2 class="summary__title">Summary:</h2>
-            <p class="summary__text">Beginner front-end developer, 33 years old, 1 year of selfeducating experience, no commercial
-              experience. My aim is to get comprehensive knowledge in frontend and to find people with the same ambitions. I'am
-              also interested in career growth in this particular area. My main strengths are:</p>
-            <ul class="summary__list">
-              <li class="summary__item">fast learning</li>
-              <li class="summary__item">curiosity</li>
-              <li class="summary__item">self control</li>
-              <li class="summary__item">good English</li>
-              <li class="summary__item">enjoyment of work</li>
-            </ul>
-          </section>
-
-          <section class="skills">
-            <h2 class="skills__title">Skills:</h2>
-            <ul class="skills__list">
-              <li class="skills__item">HTML</li>
-              <li class="skills__item">EJS</li>
-              <li class="skills__item">BEM</li>
-              <li class="skills__item">CSS</li>
-              <li class="skills__item">SASS</li>
-              <li class="skills__item">LESS</li>
-              <li class="skills__item">postcss</li>
-              <li class="skills__item">CSS Modules</li>
-              <li class="skills__item">bootstrap</li>
-              <li class="skills__item">JavaScript</li>
-              <li class="skills__item">NPM</li>
-              <li class="skills__item">gulp</li>
-              <li class="skills__item">webpack</li>
-              <li class="skills__item">babel</li>
-              <li class="skills__item">eslint</li>
-              <li class="skills__item">stylelint</li>
-              <li class="skills__item">wordpress</li>
-              <li class="skills__item">Git</li>
-              <li class="skills__item">GitHub</li>
-            </ul>
-          </section>
-        </aside>
-
         <div class="main-wrapper">
-          <section class="education">
-            <h2 class="education__title">Education:</h2>
-            <p class="education__text">I have a law degree (2010) and a good experience in that field. In 2020 I started
-              self-education in frontend field. Particularly all my listed skills were gained while self-educating. In 2021 I
-              realized the need of learning backend basics, that's why I have passed wordpress course in GLO Academy (2 months).
-            </p>
-          </section>
 
-          <section class="experience">
-            <h2 class="experience__title">Work experience:</h2>
-            <p class="experience__text">No commercial developer experience or work participation until now. One of my aims in
-              taking RS School courses is to change the fact above.</p>
+          <section class="summary hidden fade-in-2">
+            <div class="summary-wrapper">
+              <img class="summary__avatar" src="img/avatar.jpg" alt="Avatar">
+              <div class="summary__text">
+                <h1 class="summary__title">Dmitry Kolesnichenko</h1>
+                <span class="summary__subtitle">Junior front-end developer</span>
+                <p class="summary__more"><span class="selected">Summary:</span> Hi, I am 33 years old lawyer trying to change profession to frontend developer. My aim is to get comprehensive knowledge in frontend and to find people with the same ambitions. I'am also interested in career growth in this particular area.</p>
+              </div>
+            </div>
+            <div class="contacts__wrapper">
+              <ul class="contacts__list">
+                <li class="contacts__item contacts__place">
+                  <svg class="icon-place" width="20" height="20">
+                    <title>City</title>
+                    <use href="img/sprite.svg#tool"></use>
+                  </svg>Samara, Russia
+                </li>
+                <li class="contacts__item contacts__link">
+                  <a class="contacts__item__wrapper" href="tel:+79967277522">
+                    <svg class="icon-phone" width="20" height="20">
+                      <title>Phone</title>
+                      <use href="img/sprite.svg#phone"></use>
+                    </svg>
+                    <span>+7 (996) 727-75-22</span>
+                  </a>
+                </li>
+                <li class="contacts__item contacts__link">
+                  <a class="contacts__item__wrapper" href="mailto:dmitriykol@gmail.com">
+                    <svg class="icon-email" width="20" height="20">
+                      <title>Email</title>
+                      <use href="img/sprite.svg#email"></use>
+                    </svg>
+                    <span>dmitriykol@gmail.com</span>
+                  </a>
+                </li>
+                <li class="contacts__item contacts__link">
+                  <a class="contacts__item__wrapper" href="https://t.me/dmitry799" target="_blank">
+                    <svg class="icon-telegram" width="20" height="20">
+                      <title>Telegram</title>
+                      <use href="img/sprite.svg#telegram"></use>
+                    </svg>
+                    <span>dmitry799</span>
+                  </a>
+                </li>
+                <li class="contacts__item contacts__link">
+                <a class="contacts__item__wrapper" href="https://github.com/webdev163" target="_blank">
+                  <svg class="icon-github" width="20" height="20">
+                    <title>Github</title>
+                    <use href="img/sprite.svg#github-logo"></use>
+                  </svg>
+                  <span>webdev163</span>
+                </a>
+                </li>
+              </ul>
+            </div>
           </section>
           
-          <section class="english-level">
-            <h2 class="english-level__title">English level:</h2>
-            <p class="english-level__text">My current English level is B2-C1. Certificates:</p>
-            <ul class="english-level__cert-list">
-              <li class="english-level__cert-item">
-                <span class="english-level__cert-text">Certificate of completion of 2 weeks-course in ILSC New York (2016)</span>
-              </li>
-            </ul>
+          <section class="skills hidden fade-in-3" id="skills">
+            <h2 class="skills__title">Skills:</h2>
+            <div class="section-wrapper">
+              <ul class="skills__list">
+                <li class="skills__item">HTML</li>
+                <li class="skills__item">EJS</li>
+                <li class="skills__item">BEM</li>
+                <li class="skills__item">CSS</li>
+                <li class="skills__item">SASS</li>
+                <li class="skills__item">LESS</li>
+                <li class="skills__item">postcss</li>
+                <li class="skills__item">CSS Modules</li>
+                <li class="skills__item">bootstrap</li>
+                <li class="skills__item">JavaScript</li>
+                <li class="skills__item">NPM</li>
+                <li class="skills__item">gulp</li>
+                <li class="skills__item">webpack</li>
+                <li class="skills__item">babel</li>
+                <li class="skills__item">eslint</li>
+                <li class="skills__item">stylelint</li>
+                <li class="skills__item">wordpress</li>
+                <li class="skills__item">Git</li>
+                <li class="skills__item">GitHub</li>
+              </ul>
+            </div>
           </section>
 
-          <section class="code-sample">
-            <h2 class="code-sample__title">Code sample:</h2>
-            <p class="code-sample__text">Gulp task to run webpack:</p>
-            <pre>
-              <code>
-                const webpack = (done) => {
-                  webpackModule(webpackConfig, (err, stats) => {
-                    if (err) {
-                        console.error(err.stack || err);
-                        if (err.details) {
-                            console.error(err.details);
-                        }
-                        done()
-                        return;
-                    }
-                    const info = stats.toJson();
-                    if (stats.hasErrors()) {
-                        console.error(info.errors);
-                    }
-                    if (stats.hasWarnings()) {
-                        console.warn(info.warnings);
-                    }
-                    console.log(stats.toString({
-                        colors: true,
-                        errors: true,
-                        warnings: true
-                    }))
-                    done()
-                  });
-                };
+          <section class="projects" id="projects">
+            <h2 class="projects__title">Recent projects:</h2>
+            <div class="section-wrapper">
+              <article class="project-card hidden">
+                <div class="project-img">
+                  <a href="https://rolling-scopes-school.github.io/webdev163-JSFEPRESCHOOL/museum/" class="project-link" target="_blank">
+                    <img class="project-image" src="img/museum.jpg" alt="museum Louvre project">
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Louvre museum site</h3>
+                  <p class="project-text">This is a training project showing what a Louvre museum website might look like</p>
+                  <div class="project-skills">Technologies used: HTML, CSS, SASS, JavaScript</div>
+                </div>
+              </article>
+              <article class="project-card hidden">
+                <div class="project-img">
+                  <a href="https://rolling-scopes-school.github.io/webdev163-JSFEPRESCHOOL/custom-video-player/" class="project-link" target="_blank">
+                    <img class="project-image" src="img/video-player.jpg" alt="video player project">
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Custom video player</h3>
+                  <p class="project-text">This is a training project showing HTML5 video player with custom buttons written on JavaScript</p>
+                  <div class="project-skills">Technologies used: HTML, CSS, JavaScript</div>
+                </div>
+              </article>
+              <article class="project-card hidden">
+                <div class="project-img">
+                  <a href="https://rolling-scopes-school.github.io/webdev163-JSFEPRESCHOOL/vertical-slider/" class="project-link" target="_blank">
+                    <img class="project-image" src="img/vertical-slider.jpg" alt="vertical slider project">
+                  </a>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Vertical slider</h3>
+                  <p class="project-text">This is a training project showing vertical slider written on JavaScript</p>
+                  <div class="project-skills">Technologies used: HTML, CSS, JavaScript</div>
+                </div>
+              </article>
+            </div>
+          </section>
 
-                exports.webpack = webpack;
-              </code>
-            </pre>
+          <section class="experience" id="experience">
+            <h2 class="experience__title">Work experience:</h2>
+            <div class="section-wrapper">
+              <p class="experience__text">My work experience has no common with frontend field, so there is no need to specify it
+                here. I have no commercial developer experience or work participation until now. One of my aims in taking RS
+                School
+                courses is to change the fact above.</p>
+            </div>
+          </section>
+
+          <section class="education" id="education">
+            <h2 class="education__title">Education:</h2>
+            <div class="section-wrapper">
+              <p class="education__text">I have a law degree (2010) and a good experience in that field. In 2020 I started
+                self-education in frontend field. Particularly all my listed skills were gained while self-educating. In 2021 I took RS School courses.
+              </p>
+              <div class="timeline">
+                <ul class="timeline-list">
+                  <li class="timeline-item hidden">
+                    <div class="content">
+                      <p>Samara State University, law faculty</p>
+                    </div>
+                    <div class="point"></div>
+                    <div class="date">
+                      <p>2005 - 2010</p>
+                    </div>
+                  </li>
+                  <li class="timeline-item hidden">
+                    <div class="content">
+                      <p>Self-education</p>
+                    </div>
+                    <div class="point"></div>
+                    <div class="date">
+                      <p>2020 - till now</p>
+                    </div>
+                  </li>
+                  <li class="timeline-item hidden">
+                    <div class="content">
+                      <p>RS school courses</p>
+                    </div>
+                    <div class="point"></div>
+                    <div class="date">
+                      <p>July 2021 - till now</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="code-sample" id="code-sample">
+            <h2 class="code-sample__title">Code sample:</h2>
+          <div class="section-wrapper code-wrapper">
+            <figure>
+              <figcaption class="code-sample__text">Function to convert RGB to hex:</figcaption>
+                <pre>
+                  <code class="language-js hidden">
+function rgb(r, g, b) {
+  const args = Array.prototype
+    .slice.call(arguments);
+  result = [];
+  args.forEach(el => {
+    if (el &lt;= 0) {
+      result.push('00');
+    } else if (el &lt; 16) {
+      result.push('0' + el.toString(16));
+    } else if (el > 255) {
+      el = 255;
+      result.push(el.toString(16));
+    } else {
+    result.push(el.toString(16));
+    }
+  })
+  return result.join('').toUpperCase();
+}
+                  </code>
+                </pre>
+              </figure>
+            </div>
+          </section>
+
+          <section class="languages" id="languages">
+            <h2 class="languages-title">Languages:</h2>
+            <div class="section-wrapper">
+              <ul class="languages-list">
+                <li class="languages-item">
+                  <span class="languages-text">Russian (native)</span>
+                </li>
+                <li class="languages-item">
+                  <span class="languages-text">English level is B2-C1 (certificate of completion of 2 weeks-course in ILSC New York, 2016)</span>
+                </li>
+                <li class="languages-item">
+                  <span class="languages-text">French level is A2</span>
+                </li>
+              </ul>
+            </div>
           </section>
         </div>
       </main>
@@ -161,5 +265,11 @@
         <a class="footer__rsschool" href="https://rs.school/js/"><img src="img/rs_school_js.svg" width="75" height="25" alt="RS School logo"></a>
       </footer>
     </div>
+
+    <div id="overlay"></div>
+    <div class="button-up"></div>
+
+    <script src="js/highlight.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
